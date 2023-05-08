@@ -20,11 +20,21 @@ from django.urls import path
 
 
 # HTTP REQUEST
-def my_view(request):
-    return HttpResponse("UMA LINDA STRING")
+def home(request):
+    return HttpResponse("HOME")
+
+
+def about(request):
+    return HttpResponse("ABOUT")
+
+
+def contact(request):
+    return HttpResponse("CONTACT")
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", my_view),
+    path("", home),  # Home
+    path("about/", about),  # /sobre/
+    path("contact/", contact),  # /contato
 ]
