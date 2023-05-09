@@ -18,22 +18,9 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import path
 
-from recipes.views import home
-
+from recipes.views import about, contact, home
 
 # HTTP REQUEST
-def _home(request):
-    return HttpResponse("HOME")
-
-
-def about(request):
-    return HttpResponse("ABOUT")
-
-
-def contact(request):
-    return HttpResponse("CONTACT")
-
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home),  # Home
