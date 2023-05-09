@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import path
 
+from recipes.views import home
+
 
 # HTTP REQUEST
-def home(request):
+def _home(request):
     return HttpResponse("HOME")
 
 
